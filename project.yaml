@@ -1,0 +1,186 @@
+---
+  name:"GeoTag-X Sample Project"
+  short_name:"sample"
+  description:"A sample GeoTag-X project."
+  why:"This is a simple project that highlights GeoTag-X's features."
+  questionnaire:
+    -
+      key:"isWaterVisible"
+      type:"binary"
+      question:"Can you see any water in the photo?"
+      hint:"More specifically, can you see small water bodies like puddles, or large ones such as rivers or lakes?"
+      branch:
+        yes:"waterColor"
+        no:"end"
+    -
+      key:"waterColor"
+      type:"select"
+      question:"What color is the water?"
+      parameters:
+        options:
+          -
+            label:"Red"
+            value:"Red"
+          -
+            label:"Aqua Blue"
+            value:"AquaBlue"
+          -
+            label:"Green"
+            value:"Green"
+          -
+            label:"Orange"
+            value:"Orange"
+    -
+      key:"smallPoolsOfWaterVisible"
+      type:"binary"
+      question:"Can you see small pools of water?"
+      branch:
+        no:"largeBodyOfWaterVisible"
+    -
+      key:"smallPoolsOfWaterNearShelters"
+      type:"binary"
+      question:"Are these small pools of water near human shelters or a settlement?"
+      branch:"sourcesOfDrinkingWaterVisible"
+    -
+      key:"largeBodyOfWaterVisible"
+      type:"binary"
+      question:"Can you see a large body of water?"
+      branch:
+        no:"floodProtectionVisible"
+    -
+      key:"signsOfFastMovingWater"
+      type:"checklist"
+      question:"Can you see any signs of fast moving water?"
+      parameters:
+        options:
+          -
+            label:"White peaks in the water"
+            value:"Peaks"
+          -
+            label:"Rough water surface"
+            value:"Rough"
+          -
+            label:"Water swirling around objects"
+            value:"Swirling"
+    -
+      key:"floodProtectionVisible"
+      type:"checklist"
+      question:"Can you see any of the following flood protection measures?"
+      parameters:
+        options:
+          -
+            label:"Sandbags"
+            value:"Sandbags"
+          -
+            label:"Makeshift barriers"
+            value:"Barriers"
+          -
+            label:"Embankments"
+            value:"Embankments"
+    -
+      key:"sourcesOfDrinkingWaterVisible"
+      type:"binary"
+      question:"Can you see any sources of drinking water?"
+      branch:
+        no:"animalsVisible"
+    -
+      key:"sourcesOfDrinkingWater"
+      type:"checklist"
+      question:"Which sources of drinking water can you see?"
+      parameters:
+        options:
+          -
+            label:"Water pipes and access taps"
+            value:"Pipes"
+          -
+            label:"Water tankers"
+            value:"Tankers"
+    -
+      key:"sourcesOfDrinkingWaterAffected"
+      type:"binary"
+      question:"Have they been affected by the flood waters?"
+    -
+      key:"animalsVisible"
+      type:"illustrative-checklist"
+      question:"Which animals do you see?"
+      parameters:
+        options:
+          -
+            label:"Cattle"
+            value:"Cattle"
+            illustration:
+              image:"http://www.interservicos.com/media/uploads/3n.png"
+              source:
+                name:"Interservicos"
+                url:"http://www.interservicos.com/index.php/en/projectos/detail/306/"
+            more_examples:"https://www.google.com/#q=cattle+africa"
+          -
+            label:"Camel"
+            value:"Camel"
+            illustration:
+              image:"http://www.animalcorner.co.uk/wildlife/camels/graphics/cameldrom.jpg"
+              source:
+                name:"Animal Corner"
+                url:"http://www.animalcorner.co.uk/wildlife/camels/camel_dromedary.html"
+            more_examples:"https://www.google.com/#q=camel"
+          -
+            label:"Horse"
+            value:"Horse"
+            illustration:
+              image:"http://40.media.tumblr.com/cf2d20197662f0a7f92bab14eb172f5e/tumblr_muk62bEGmk1r34z06o1_1280.jpg"
+              source:
+                name:"Our Africa Blog"
+                url:"http://www.ourafricablog.com/post/63820121729/nomadamsterdam-somali-horses-having-fun-at"
+            more_examples:"https://www.google.com/#q=horse"
+          -
+            label:"Sheep"
+            value:"Sheep"
+            illustration:
+              image:"http://media-cache-ec0.pinimg.com/236x/cd/44/16/cd44162bd06893707689624f33314daf.jpg"
+              source:
+                name:"colouredsheep.org.nz"
+                url:"http://www.colouredsheep.org.nz/"
+            more_examples:"https://www.google.com/#q=sheep+africa"
+          -
+            label:"Donkey"
+            value:"Donkey"
+            illustration:
+              image:"http://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Innocence_%283426318415%29.jpg/301px-Innocence_%283426318415%29.jpg"
+              source:
+                name:"Innocence"
+                url:"http://www.flickr.com/photos/adavey/3426318415/"
+            more_examples:"https://www.google.com/#q=donkey"
+          -
+            label:"Goat"
+            value:"Goat"
+            illustration:
+              image:"http://capda.org.au/wp-content/uploads/2013/10/DSC09840-960x640.jpg"
+              source:
+                name:"CAPDA"
+                url:"http://capda.org.au/goat-and-chicken-raising-projects/"
+            more_examples:"https://www.google.com/#q=goat"
+          -
+            label:"Oxen"
+            value:"Oxen"
+            illustration:
+              image:"http://markwatkinson.zenfolio.com/img/s3/v40/p357350409-3.jpg"
+              source:
+                name:"Mark W. Atkinson"
+                url:"http://markwatkinson.zenfolio.com/p709151464/h154CBC09#h154cbc09"
+            more_examples:"https://www.google.com/#q=ox"
+    -
+      key:"geolocation"
+      type:"geotagging"
+      question:"Can you geo-localize the photo?"
+      parameters:
+        location:"Geneva"
+    -
+      key:"name"
+      type:"text"
+      question:"Please enter your name"
+      parameters:
+        placeholder:"Or you know, whatever you'd like ..."
+    -
+      key:"today"
+      type:"date"
+      question:"What day is it today?"

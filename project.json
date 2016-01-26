@@ -1,0 +1,372 @@
+{
+  "name": "Map Evaluation ",
+  "short_name": "mapreview",
+  "description": "Sample Map Evaluation Description",
+  "why": "Lorum ipsum...",
+  "questionnaire": [
+    {
+      "key": "FullTitle",
+      "question": "What is the full title of map?",
+      "type": "text",
+      "parameters": {
+        "placeholder": "..placeholder.."
+      }
+    },
+    {
+      "key": "FileName",
+      "question": "File name?",
+      "type": "text",
+      "answer": {
+        "placeholder": "..placeholder.."
+      }
+    },
+    {
+      "key": "MapLanguage",
+      "question": "Please select the main language of the map. If you do not recognise the language select Don't know.",
+      "type": "checklist",
+      "parameters": {
+        "options": [
+          {
+            "value": "English",
+            "label": "English"
+          },
+          {
+            "value": "French",
+            "label": "French"
+          },
+          {
+            "value": "Tagalog",
+            "label": "Tagalog"
+          }
+        ]
+      }
+    },
+    {
+      "key": "ProductionDate",
+      "question": "What is the map production date?",
+      "type": "date"
+    },
+    {
+      "key": "MapSeries",
+      "question": "Look in the map description and other text to see if you can identify if it is part of a series. You should look in the map text for words like, update, issue, daily, weekly, etc.",
+      "type": "select",
+      "parameters": {
+        "options": [
+          {
+            "value": "YesNoFrequency",
+            "label": "yes - no indication of update frequency on map"
+          },
+          {
+            "value": "YesDaily",
+            "label": "yes - updated daily"
+          },
+          {
+            "value": "YesWeekly",
+            "label": "yes - updated weekly"
+          },
+          {
+            "value": "YesMonthly",
+            "label": "yes - updated monthly"
+          },
+          {
+            "value": "YesIrregularly",
+            "label": "yes - updated irregularly"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MapAuthor",
+      "question": "Select the name\/s of the organisation\/s that authored the map.",
+      "type": "checklist",
+      "parameters": {
+        "options": [
+          {
+            "value": "GovDepEd",
+            "label": "Government: Department of Education (DepEd)"
+          },
+          {
+            "value": "GovDOH",
+            "label": "Government: Department of Health (DOH)"
+          },
+          {
+            "value": "GovDPWH",
+            "label": "Government: Department of Public Works and Highways (DPWH)"
+          },
+          {
+            "value": "GovDSWD",
+            "label": "Government: Department of Social Welfare and Development (DSWD)"
+          },
+          {
+            "value": "GovNDRRMC",
+            "label": "Government: National Disaster Risk Reduction & Management Council (NDRRMC)"
+          },
+          {
+            "value": "GovCCCM",
+            "label": "Cluster: Camp Coordination and Camp Management (CCCM)"
+          },
+          {
+            "value": "ClusterRecovery",
+            "label": "Cluster: Recovery"
+          },
+          {
+            "value": "ClusterEducation",
+            "label": "Cluster: Education"
+          },
+          {
+            "value": "ClusterETC",
+            "label": "Cluster: Emergency Telecommunication"
+          },
+          {
+            "value": "ClusterFoodSec",
+            "label": "Cluster: Food Security"
+          },
+          {
+            "value": "ClusterHealth",
+            "label": "Cluster: Health"
+          },
+          {
+            "value": "ClusterLog",
+            "label": "Cluster: Logistics"
+          },
+          {
+            "value": "ClusterNutrition",
+            "label": "Cluster: Nutrition"
+          },
+          {
+            "value": "ClusterProtection",
+            "label": "Cluster: Protection"
+          },
+          {
+            "value": "ClusterShelter",
+            "label": "Cluster: Shelter"
+          },
+          {
+            "value": "ClusterWASH",
+            "label": "Cluster: Water, Sanitation and Hygiene (WASH)"
+          },
+          {
+            "value": "UNFAO",
+            "label": "United Nations: Food and Agriculture Organization (FAO)"
+          },
+          {
+            "value": "UNIOM",
+            "label": "United Nations: International Organization for Migration (IOM)"
+          },
+          {
+            "value": "UNOCHA",
+            "label": "United Nations: Office for the Coordination of Humanitarian Affairs (OCHA)"
+          },
+          {
+            "value": "UNDP",
+            "label": "United Nations: UN Development Programme (UNDP)"
+          },
+          {
+            "value": "UNFPA",
+            "label": "United Nations: United Nations Population Fund (UNFPA)"
+          },
+          {
+            "value": "UNHCR",
+            "label": "United Nations: United Nations High Commissioner for Refugees (UNHCR)"
+          },
+          {
+            "value": "UNICEF",
+            "label": "United Nations: United Nations Children's Fund (UNICEF)"
+          },
+          {
+            "value": "UNOSAT",
+            "label": "United Nations: Operational Satellite Applications Programme (UNOSAT)"
+          },
+          {
+            "value": "UNWFP",
+            "label": "United Nations: World Food Programme (WFP)"
+          },
+          {
+            "value": "UNWHO",
+            "label": "United Nations: World Health Organization (WHO)"
+          },
+          {
+            "value": "NGOGIScorps",
+            "label": "NGO: GISCorps"
+          },
+          {
+            "value": "NGOIMMAP",
+            "label": "NGO: IMMAP"
+          },
+          {
+            "value": "NGOMapAction",
+            "label": "NGO: MapAction"
+          },
+          {
+            "value": "NGOREACH",
+            "label": "NGO: REACH"
+          },
+          {
+            "value": "NGOCartONG",
+            "label": "NGO: CartONG"
+          },
+          {
+            "value": "NGOACAPS",
+            "label": "NGO: Assessment Capacities Project (ACAPS)"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MapDonor",
+      "question": "Please select the organisations who have been attributed with funding the production of this map. Such as donors.",
+      "type": "checklist",
+      "parameters": {
+        "options": [
+          {
+            "value": "GovDepEd",
+            "label": "Government: Department of Education (DepEd)"
+          },
+          {
+            "value": "USAID",
+            "label": "USAID (including Office of Foreign Disaster Assistance (OFDA))"
+          },
+          {
+            "value": "UKAID",
+            "label": "UKAID (including Department for International Development (DFID))"
+          },
+          {
+            "value": "WorldBank",
+            "label": "World Bank"
+          },
+          {
+            "value": "CIDA",
+            "label": "Canadian International Development Agency (CIDA)"
+          },
+          {
+            "value": "AusAUD",
+            "label": "AusAID"
+          },
+          {
+            "value": "JICA",
+            "label": "Japan International Cooperation Agency (JICA)"
+          },
+          {
+            "value": "EC",
+            "label": "European Union (EU)\/European Commission (EC)"
+          },
+          {
+            "value": "ADB",
+            "label": "Asian Development Bank (ADB)"
+          },
+          {
+            "value": "OIC",
+            "label": "Organisation of Islamic Cooperation (OIC)"
+          },
+          {
+            "value": "Private",
+            "label": "Private, non-governmental funding source (e.g., foundation or corporation)"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MapExtent",
+      "question": "Please select the geographic area covered by the map. If the map shows the whole of the Philippines, select 'whole country'. Otherwise select the regions that you can see displayed. You should select a region even if it is only partly displayed on the map. If you can see multiple regions select all that you can see. You can get this information by looking at the labels on the map itself, or by reading the description if there is one.",
+      "type": "select",
+      "parameters": {
+        "options": [
+          {
+            "value": "WholeCountry",
+            "label": "Whole country"
+          },
+          {
+            "value": "Region4B",
+            "label": "Region 4B - Mimaropa"
+          },
+          {
+            "value": "Region5",
+            "label": "Region 5 - Bicol Region"
+          },
+          {
+            "value": "Region6",
+            "label": "Region 6 - Western Visayas"
+          },
+          {
+            "value": "Region7",
+            "label": "Region 7 - Central Visayas"
+          },
+          {
+            "value": "Region8",
+            "label": "Region 8 - Eastern Visayas"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MapDisclaimer",
+      "question": "Does the map contain a disclaimer or indication of uncertainty in the data?",
+      "type": "checklist",
+      "parameters": {
+        "options": [
+          {
+            "value": "GenericBoundary",
+            "label": "Generic Boundaries disclaimer"
+          },
+          {
+            "value": "GeneralDisclaimer",
+            "label": "Other type of general disclaimer"
+          },
+          {
+            "value": "Errors",
+            "label": "Narrative on possible errors\/limitations"
+          },
+          {
+            "value": "Confidence",
+            "label": "Displays some form of confidence measure within the data"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MapCopyright",
+      "question": "Where is the copyright statement and\/or symbol on the map?",
+      "type": "checklist",
+      "parameters": {
+        "options": [
+          {
+            "value": "Basemap",
+            "label": "Part of the basemap image"
+          },
+          {
+            "value": "MetadataText",
+            "label": "Part of the map metadata\/marginalia as text"
+          },
+          {
+            "value": "MetadataSymbol",
+            "label": "Part of the map metadata\/marginalia as a symbol"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MapAudience",
+      "question": "Have the authors specified who the audience of the map is (or not)?",
+      "type": "text",
+      "parameters": {
+        "placeholder": "...placeholder text.."
+      }
+    },
+    {
+      "key": "MapTarget",
+      "question": "Do you have an idea about who the map may have been targeted at (or not)?",
+      "type": "text",
+      "parameters": {
+        "placeholder": "...placeholder text.."
+      }
+    },
+    {
+      "key": "GeneralComents",
+      "question": "General comments",
+      "type": "text",
+      "parameters": {
+        "placeholder": "...placeholder text.."
+      }
+    }
+  ]
+}
